@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register as Wholesaler | Live-MART</title>
+  <link rel="stylesheet" href="../css/Regist_total.css" />
+</head>
+<body>
+  <img src="../logo.jpg" alt="Live-MART Logo" class="site-logo">
+  <h1>Register as a Wholesaler</h1>
+
+  <div class="form-container">
+    <form action="/register/wholesaler" method="POST" class="register-form">
+      <h2>Create a Wholesaler Account</h2>
+
+      <label for="wholesaler-company">Company Name</label>
+      <input type="text" id="wholesaler-company" name="company_name" placeholder="Enter your company name" required />
+
+      <label for="wholesaler-email">Company Email</label>
+      <input type="email" id="wholesaler-email" name="email" placeholder="Enter your company email" required />
+
+      <label for="wholesaler-license">License Number</label>
+      <input type="text" id="wholesaler-license" name="license_number" placeholder="Enter your license number" required />
+
+      <label for="wholesaler-password">Password</label>
+      <input type="password" id="wholesaler-password" name="password" placeholder="Create a password" required />
+
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+  </div>
+    <!-- Login Button Below -->
+  <div style="margin-top: 20px;">
+    <button onclick="window.location.href='login.html'" class="loginbtn"><b>Already have an account? Log In</b></button>
+  </div>
+  <footer class="footer">
+  © 2025 Live-MART. All rights reserved.
+  </footer>
+
+  <style>
+  @property --angle{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .form-container::after,.form-container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: red;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    background-image: conic-gradient(from var(--angle),rgb(157, 156, 156),rgb(0, 0, 0));
+    animation: 60s spin linear infinite;
+  }
+  .form-container::before{
+    filter:blur(1rem);
+    opacity: 0.4;
+  }
+  @keyframes spin{
+    from{
+      --angle:0deg;
+    }
+    to{
+      --angle:360deg;
+    }
+  }
+</style>
+</body>
+</html>
